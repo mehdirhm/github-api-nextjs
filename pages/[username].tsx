@@ -168,6 +168,7 @@ import { useState, useEffect, ChangeEvent } from 'react';
 import axios from 'axios';
 import styles from '../styles/username.module.css';
 import Link from 'next/link';
+import { GetServerSidePropsContext } from 'next';
 
 interface UserData {
   avatar_url: string;
@@ -310,7 +311,7 @@ const Username = ({ userData, repos }: Props) => {
   );
 };
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps(context: GetServerSidePropsContext) {
   const { username } = context.query;
 
   try {

@@ -169,6 +169,28 @@ import axios from 'axios';
 import styles from '../styles/username.module.css';
 import Link from 'next/link';
 
+
+interface UserData {
+  avatar_url: string;
+  name: string;
+  html_url: string;
+  public_repos: number;
+}
+
+interface Repo {
+  id: string;
+  name: string;
+  html_url: string;
+  forks_count: number;
+  stargazers_count: number;
+  updated_at: string;
+}
+
+interface Props {
+  userData: UserData;
+  repos: Repo[];
+}
+
 const Username = ({ userData, repos }) => {
   const [filteredRepos, setFilteredRepos] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');

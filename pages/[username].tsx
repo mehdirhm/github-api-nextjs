@@ -1,12 +1,12 @@
 
-
+import Image from 'next/image'
 import { useState, useEffect } from 'react';
 import { Octokit } from '@octokit/rest';
 import styles from '../styles/username.module.css';
 import Link from 'next/link';
 
 const octokit = new Octokit({
-  auth: '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', 
+  auth: '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', 
 });
 
 const Username = ({ userData, repos }) => {
@@ -20,7 +20,6 @@ const Username = ({ userData, repos }) => {
       if (repos && repos.length > 0) {
         const sorted = repos.sort((repo1, repo2) => {
           if (sortBy === 'forks') {
-            // مرتب سازی بر اساس تعداد Fork
             if (repo1.forks_count > repo2.forks_count) {
               return -1;
             } else if (repo1.forks_count < repo2.forks_count) {
@@ -29,7 +28,6 @@ const Username = ({ userData, repos }) => {
               return 0;
             }
           } else if (sortBy === 'stars') {
-            // مرتب سازی بر اساس تعداد Star
             if (repo1.stargazers_count > repo2.stargazers_count) {
               return -1;
             } else if (repo1.stargazers_count < repo2.stargazers_count) {
@@ -38,12 +36,10 @@ const Username = ({ userData, repos }) => {
               return 0;
             }
           } else if (sortBy === 'updated') {
-            // مرتب سازی بر اساس تاریخ آخرین آپدیت
             return (
               new Date(repo2.updated_at).getTime() - new Date(repo1.updated_at).getTime()
             );
           } else {
-            // بر اساس مرتب سازی پیش‌فرض (به تعداد Fork)
             if (repo1.forks_count > repo2.forks_count) {
               return -1;
             } else if (repo1.forks_count < repo2.forks_count) {
@@ -85,7 +81,7 @@ const Username = ({ userData, repos }) => {
       }}>
         <div className={styles.descriptionContainer}>
           <div className={styles.avatarContainer}>
-            <img className={styles.avatar} src={userData.avatar_url} alt="Profile" />
+            <Image width={50} height={50} className={styles.avatar} src={userData.avatar_url} alt="Profile" />
             <h2>{userData.name}</h2>
           </div>
           <div className={styles.repoDescription}>

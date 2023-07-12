@@ -168,7 +168,6 @@ import { useState, useEffect, ChangeEvent } from 'react';
 import axios from 'axios';
 import styles from '../styles/username.module.css';
 import Link from 'next/link';
-import { GetServerSidePropsContext } from 'next';
 
 interface UserData {
   avatar_url: string;
@@ -248,10 +247,70 @@ const Username = ({ userData, repos }: Props) => {
     setSortBy(event.target.value);
   };
 
-  // ...
+  const handleLoadMore = () => {
+    setVisibleRepos((prevVisibleRepos) => prevVisibleRepos + 10);
+  };
+
+  if (!userData) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <div className={styles.container}>
+      <div style={{
+       marginRight: '-40px',
+      }}>
+        <div className={styles.descriptionContainer}>
+          <div className={styles.avatarContainer}>
+            <Image width={50} height={50} className={styles.avatar} src={userData.avatar_url} alt="Profile" />
+            <h2>{userData.name}</h2>
+          </div>
+          <div className={styles.repoDescription}>
+            <p>{userData.html_url}</p>
+            <p>Public Repos: {userData.public_repos}</p>
+          </div>
+        </div>
+
+        <div className={styles.searchBoxContainer}>
+          <input
+            type="text"
+            placeholder="Search repos"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className={styles.searchInput}
+          />
+          <div className={styles.selectContainer}>
+            <span>Sort By:</span>
+            <select value={sortBy} onChange={handleSortChange}>
+              <option value="forks">Forks</option>
+              <option value="stars">Stars</option>
+              <option value="updated">Updated</option>
+            </select>
+          </div>
+        </div>
+
+        <ul className={styles.repoList}>
+          {filteredRepos.slice(0, visibleRepos).map((repo) => (
+            <li key={repo.id}>
+              <a href={repo.html_url}>{repo.name.slice(0, 20)}</a>
+            </li>
+          ))}
+        </ul>
+
+        {filteredRepos.length > visibleRepos && (
+          <button className={styles.loadMoreButton} onClick={handleLoadMore}>
+            Load More
+          </button>
+        )}
+      </div>
+      <Link href="/" passHref>
+        <button className={styles.backButton}>Back to Home</button>
+      </Link>
+    </div>
+  );
 };
 
-export async function getServerSideProps(context: GetServerSidePropsContext) {
+export async function getServerSideProps(context) {
   const { username } = context.query;
 
   try {

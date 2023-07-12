@@ -14,21 +14,23 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Demo
+We have deployed our website at the address [https://github-api-nextjs.vercel.app](https://github-api-nextjs.vercel.app). You can view the live output of the website through the following link.
 
-## Deploy on Vercel
+## About Project
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project utilizes the GitHub API to fetch the username of a desired user from you and display information about their repositories. Additionally, you can also view the top 10 GitHub repositories.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Project features
+- Possibility to sort repositories based on the number of forks, stars, and the date of the last update.
+- Ability to display the top repositories.
+- Responsive design.
+
+
+
+

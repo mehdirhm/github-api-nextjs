@@ -1,16 +1,16 @@
 "use client"
-import { useState } from 'react';
+import { SetStateAction, useState } from 'react';
 import Link from 'next/link';
 import styles from '../styles/page.module.css';
 
 const HomePage = () => {
   const [username, setUsername] = useState('');
 
-  const handleInputChange = (event) => {
+  const handleInputChange = (event: { target: { value: SetStateAction<string>; }; }) => {
     setUsername(event.target.value);
   };
 
-  const handleKeyDown = (event) => {
+  const handleKeyDown = (event: { key: string; }) => {
     if (event.key === 'Enter') {
       window.location.href = `/${username}`;
     }

@@ -78,7 +78,7 @@ const Username = ({ userData, repos }: Props) => {
         setFilteredRepos([]);
       }
     };
-
+    
     filterRepos();
   }, [repos, searchTerm, sortBy]);
 

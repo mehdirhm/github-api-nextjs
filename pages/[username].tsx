@@ -1,6 +1,6 @@
 
 import Image from 'next/image'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, SetStateAction } from 'react';
 import { Octokit } from '@octokit/rest';
 import styles from '../styles/username.module.css';
 import Link from 'next/link';
@@ -62,7 +62,7 @@ const Username = ({ userData, repos }) => {
     filterRepos();
   }, [repos, searchTerm, sortBy]);
 
-  const handleSortChange = (event) => {
+  const handleSortChange = (event: { target: { value: SetStateAction<string>; }; }) => {
     setSortBy(event.target.value);
   };
 

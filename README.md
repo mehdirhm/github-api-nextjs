@@ -21,7 +21,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Demo
 We have deployed our website at the address [https://github-api-nextjs.vercel.app](https://github-api-nextjs.vercel.app). You can view the live output of the website through the following link.
-
+## About Project
 ## About Project
 
 This project utilizes the GitHub API to fetch the username of a desired user from you and display information about their repositories. Additionally, you can also view the top 10 GitHub repositories.

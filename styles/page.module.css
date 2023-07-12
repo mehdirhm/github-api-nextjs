@@ -8,11 +8,13 @@
   }
   
   .title {
+    color: #0c77e9;
     font-size: 24px;
     margin-bottom: 20px;
   }
   
   .input {
+    color: #3e3e3e;
     width: 300px;
     padding: 10px;
     margin-bottom: 10px;

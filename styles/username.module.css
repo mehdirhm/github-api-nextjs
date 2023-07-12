@@ -11,7 +11,7 @@
   }
   
   .repoList {
-    
+    width: 500px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -30,8 +30,29 @@
     padding-bottom: 12px;
     border-radius: 5px;
     width: 28%;
-    
   }
+  
+  @media only screen and (max-width: 525px) {
+    .repoList  {
+      width: 100%;
+    }
+    .repoList li {
+      width: 40%;
+    }
+    .selectContainer {
+      margin-right: 4%;
+    }
+    .repoDescription{
+      display: none;
+    }
+    .loadMoreButton {
+      margin-left: 26%;
+      
+    }
+   
+  }
+  
+  
   .repoList li a {
     text-decoration: none;
     color: #3e3e3e;
@@ -123,8 +144,9 @@
 
 
   .loadMoreButton {
-    margin-top: 50px;
-    transform: translateX(230%);
+    margin-top: 20px;
+    /* transform: translateX(230%); */
+    margin-left: 38%;
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
@@ -138,13 +160,13 @@
   }
 
   .backButton {
-    padding: 10px 20px;
-    margin-top: 20px;
+    padding: 5px 10px;
+    margin-top: 40px;
     background-color: #0366d6;
     color: #fff;
     border: none;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 12px;
     cursor: pointer;
   }
   

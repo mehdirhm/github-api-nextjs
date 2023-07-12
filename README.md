@@ -20,9 +20,7 @@ pnpm dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 
-Subject : github-api-nextjs
-Author : Mehdi Rahimsirat
-Date : july 12 2023
+
  
 Setup steps : 
 	

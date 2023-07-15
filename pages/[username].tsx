@@ -91,14 +91,13 @@ const Username = ({ userData, repos }: Props) => {
   };
 
   if (!userData) {
+
     return <div>Loading...</div>;
   }
 
   return (
     <div className={styles.container}>
-      <div style={{
-       marginRight: '-40px',
-      }}>
+      <div>
         <div className={styles.descriptionContainer}>
           <div className={styles.avatarContainer}>
             <Image width={50} height={50} className={styles.avatar} src={userData.avatar_url} alt="Profile" />

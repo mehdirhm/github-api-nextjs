@@ -34,8 +34,7 @@
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+   
     flex-wrap: wrap ;
     gap: 12px;
     margin-top: 30px;
@@ -78,7 +77,6 @@
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
-    margin-left: 6.7%;
   }
   
   .backButton:hover {
@@ -101,9 +99,4 @@
     background-color: #0056b3;
   }
   
-  @media only screen and (max-width: 525px) {
-    .backButton {
-      margin-left: 4.1%;
-    }
-
-  }
+  

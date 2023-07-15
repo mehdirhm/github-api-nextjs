@@ -1,6 +1,8 @@
 
 Subject : github-api-nextjs
+
 Author : Mehdi Rahimsirat
+
 Date : july 12 2023
  
 ## Getting Started
@@ -18,28 +20,32 @@ pnpm dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 
+
+ 
 Setup steps : 
 	
-	1. Git clone from repository https://github.com/mehdirhm/github-api-nextjs 
-	2. Use npm or yarn package manager which has same application ( prefer to use yarn ) 
-	3. Use yarn run dev which execute nextjs scripts to build a development version for our project 
-	4. Now project is up, check localhost:3000 to route index page 
-	5. Remember that a VPN is required because that host which the project runs over is banned for IR IPs  
-	6. Index page title is "Welcome to the Homepage!", in this page you can use two button, one of them is for search profiles after filling the input text, another one lists popular repositories, as the proposal asked for.
-	7.Search Github  Profile Page
-		7.1. By adding a name to search box and cliking "Go to User Profile" button you can access every github profile which you want.
-		7.2  Inforamtions which have been displayed are web-address, number of public repositories and repositories list.
-		7.3. List could be sorted by 3 criteria, most stars, most forks and lastest updated.
-		7.4. This page also has a search box to find desired repository from list below and a button to loading more repositories which have been 				 showed too.
-	8.Most Popular Repositories Page 
-		8.1  By clicking "Go to Popular Repositories" button, first 10 repositories with most stars could be displayed
-		8.2  A search box has been designed to search among those ones.
+1. Git clone from repository https://github.com/mehdirhm/github-api-nextjs 
+2. Use npm or yarn package manager which has same application ( prefer to use yarn ) 
+3. Use yarn run dev which execute nextjs scripts to build a development version for our project 
+4. Now project is up, check localhost:3000 to route index page 
+5. Use this link https://github-api-nextjs.vercel.app/ to watch the production version which has been deployed on external host 
+6. Remember that a VPN is required because that host which the project runs over is banned for IR IPs  
+7. Index page title is "Welcome to the Homepage!", in this page you can use two button, one of them is for search profiles after filling the input text, another one lists popular repositories, as the proposal asked for.
+8. Search Github  Profile Page
+    - By adding a name to search box and cliking "Go to User Profile" button you can access every github profile which you want.
+    -  Inforamtions which have been displayed are web-address, number of public repositories and repositories list.
+    - List could be sorted by 3 criteria, most stars, most forks and lastest updated.
+    - This page also has a search box to find desired repository from list below and a button to loading more repositories which have been 				 showed too.
+    - Most Popular Repositories Page 
+	-  By clicking "Go to Popular Repositories" button, first 10 repositories with most stars could be displayed
+	-  A search box has been designed to search among those ones.
 	
 Attention : 
 	
-	As in proposal requested, using Github Pages expected, but in this project which implemented by NextJS framework, server-side services needed to handle server side props, while Github pages just support static content which cause to replacing it by another platform, here in this project Vercel PaaS provider is used for deployment. 
+As in proposal requested, using Github Pages expected, but in this project which implemented by NextJS framework, server-side services needed to handle server side props, while Github pages just support static content which cause to replacing it by another platform, here in this project Vercel PaaS provider is used for deployment. 
 	
-	source : https://stackoverflow.com/questions/70875402/how-to-render-dynamic-pages-on-github-pages
+source : https://stackoverflow.com/questions/70875402/how-to-render-dynamic-pages-on-github-pages
+
 
 
 
